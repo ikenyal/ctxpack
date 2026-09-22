@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "lint on save",
+      "trigger": "PostFileSave",
+      "description": "Run eslint --fix when a .ts or .tsx file is saved",
+      "matcher": "\\.(ts|tsx)$",
+      "action": {
+        "type": "command",
+        "command": "npx eslint --fix ."
+      }
+    }
+  ]
+}

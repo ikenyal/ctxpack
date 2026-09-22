@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "tests on core change",
+      "trigger": "PostFileSave",
+      "description": "Run vitest when a file under src/core/ is saved",
+      "matcher": "src/core/",
+      "action": {
+        "type": "command",
+        "command": "npx vitest run"
+      }
+    }
+  ]
+}
