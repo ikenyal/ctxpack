@@ -9,7 +9,7 @@
   - Confirm `vitest --run` executes (zero tests is fine) and `tsc --noEmit` passes.
   - _Requirements: all (project setup)_
 
-- [ ] 2. Define the core data model and comparator
+- [x] 2. Define the core data model and comparator
   - Add `Item` and `PackResult` types in `src/core/`.
   - Implement `compareItems` (priority descending, then `id` ascending).
   - Add unit tests for the comparator, including the equal-priority tie-break.
