@@ -1,6 +1,6 @@
 # Implementation Plan
 
-- [ ] 1. Scaffold the project
+- [x] 1. Scaffold the project
   - Create `package.json` (Node 20+, type: module, scripts for test/build/lint/dev).
   - Create `tsconfig.json` in strict mode.
   - Add and configure Vitest, ESLint, and Vite.
