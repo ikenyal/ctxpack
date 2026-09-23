@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "ctxpack": {
+      "command": "node",
+      "args": ["dist/mcp/index.js"],
+      "disabled": false,
+      "autoApprove": ["pack_context"]
+    }
+  }
+}
