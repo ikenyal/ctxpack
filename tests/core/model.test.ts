@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { compareItems, type Item } from './model.js';
+import { compareItems, type Item } from '../../src/core/model.js';
 
 const item = (id: string, priority: number, tokens = 0): Item => ({
   id,

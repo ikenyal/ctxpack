@@ -17,3 +17,4 @@ ctxpack/
 - **`src/web/`**: UI such as the budget slider. Holds no logic; calls the core.
 - Dependencies always point inward: cli / web -> core. The core must never import from the outer layers.
 - Each item has an `id`, a `priority`, and a token count.
+- **Tests**: Tests live under `tests/`, mirroring `src/` (for example `tests/core/model.test.ts`). Do not put test files in `src/`.
