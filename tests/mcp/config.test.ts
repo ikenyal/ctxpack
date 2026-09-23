@@ -37,6 +37,8 @@ describe('.kiro/settings/mcp.json', () => {
       >;
     };
     const ctxpack = config.mcpServers.ctxpack;
+    expect(ctxpack).toBeDefined();
+    if (ctxpack === undefined) throw new Error('ctxpack server missing');
     expect(ctxpack.command).toBe('node');
     expect(Array.isArray(ctxpack.args)).toBe(true);
     const args = ctxpack.args as string[];
@@ -48,7 +50,10 @@ describe('.kiro/settings/mcp.json', () => {
     const config = readJson('.kiro/settings/mcp.json') as {
       mcpServers: Record<string, { disabled?: unknown }>;
     };
-    expect(config.mcpServers.ctxpack.disabled).toBe(false);
+    const ctxpack = config.mcpServers.ctxpack;
+    expect(ctxpack).toBeDefined();
+    if (ctxpack === undefined) throw new Error('ctxpack server missing');
+    expect(ctxpack.disabled).toBe(false);
   });
 
   // Requirements 5.4, 5.5: exactly one tool, pack_context, is auto-approved.
@@ -56,7 +61,10 @@ describe('.kiro/settings/mcp.json', () => {
     const config = readJson('.kiro/settings/mcp.json') as {
       mcpServers: Record<string, { autoApprove?: unknown }>;
     };
-    expect(config.mcpServers.ctxpack.autoApprove).toEqual(['pack_context']);
+    const ctxpack = config.mcpServers.ctxpack;
+    expect(ctxpack).toBeDefined();
+    if (ctxpack === undefined) throw new Error('ctxpack server missing');
+    expect(ctxpack.autoApprove).toEqual(['pack_context']);
   });
 });
 
