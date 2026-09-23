@@ -9,7 +9,7 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    include: ['tests/**/*.test.ts', 'src/**/*.test.ts'],
+    include: ['tests/**/*.test.ts'],
     root: '.',
     // Scaffolding has no tests yet; a zero-test run should still succeed.
     passWithNoTests: true,

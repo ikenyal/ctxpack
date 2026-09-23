@@ -14,7 +14,7 @@
     "build": "tsc && vite build",
     "lint": "eslint .",
     "dev": "vite",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc -p tsconfig.test.json"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

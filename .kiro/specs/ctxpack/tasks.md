@@ -24,8 +24,10 @@
   - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 2.4_
 
 - [ ] 4. Add property-based tests for the correctness properties
-  - Add a property-based testing library. Generate `Item[]` with unique `id`s, and
-    non-negative integers for `tokens` and `budget`. Write tests for:
+  - Add a property-based testing library. Generate `Item[]` with unique `id`s,
+    integer priorities (no `NaN` or `Infinity`, since `compareItems` relies on
+    numeric subtraction), and non-negative integers for `tokens` and `budget`.
+    Write tests for:
     - Property 1 — Budget: selected tokens never exceed the budget.
     - Property 2 — No priority inversion.
     - Property 3 — Budget monotonicity (subset for `b1 <= b2`).
