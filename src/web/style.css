@@ -8,6 +8,16 @@ body {
   color: #1a1a1a;
 }
 
+.app-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.app-subtitle {
+  margin: 0 0 1.5rem;
+  color: #555;
+}
+
 .controls {
   margin-bottom: 1.5rem;
 }
@@ -21,6 +31,16 @@ body {
 .summary {
   margin: 0.5rem 0 0;
   font-variant-numeric: tabular-nums;
+}
+
+/* Header row: same column layout as items so labels line up. */
+.item-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.4rem 0.6rem;
+  font-weight: 700;
+  border-bottom: 1px solid #ddd;
 }
 
 /* Simple aligned list: no bullets, one row per item. */

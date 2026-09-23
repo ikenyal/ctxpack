@@ -20,6 +20,23 @@ import { pack } from '../core/index.js';
 export function renderItemList(container: HTMLElement, items: Item[]): void {
   container.replaceChildren();
 
+  const header = document.createElement('div');
+  header.className = 'item-header';
+
+  const headerId = document.createElement('span');
+  headerId.className = 'item-id';
+  headerId.textContent = 'id';
+
+  const headerPriority = document.createElement('span');
+  headerPriority.className = 'item-priority';
+  headerPriority.textContent = 'priority';
+
+  const headerTokens = document.createElement('span');
+  headerTokens.className = 'item-tokens';
+  headerTokens.textContent = 'tokens';
+
+  header.append(headerId, headerPriority, headerTokens);
+
   const list = document.createElement('ul');
   list.className = 'item-list';
 
@@ -44,7 +61,7 @@ export function renderItemList(container: HTMLElement, items: Item[]): void {
     list.append(row);
   }
 
-  container.append(list);
+  container.append(header, list);
 }
 
 /** Sum the `tokens` of every item; the upper bound for the budget slider. */
@@ -117,6 +134,15 @@ export function renderApp(
   const budget =
     initialBudget === undefined ? max : Math.min(Math.max(initialBudget, 0), max);
 
+  const heading = document.createElement('h1');
+  heading.className = 'app-title';
+  heading.textContent = 'ctxpack';
+
+  const subtitle = document.createElement('p');
+  subtitle.className = 'app-subtitle';
+  subtitle.textContent =
+    'Priority-prefix packing: stops at the first item that does not fit, so raising the budget never removes a selected item.';
+
   const controls = document.createElement('div');
   controls.className = 'controls';
 
@@ -137,7 +163,7 @@ export function renderApp(
   list.className = 'list-container';
   renderItemList(list, items);
 
-  container.append(controls, list);
+  container.append(heading, subtitle, controls, list);
 
   const applyBudget = (): void => {
     updateSelection(list, items, Number(slider.value), summary);
