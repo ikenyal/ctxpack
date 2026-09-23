@@ -15,7 +15,7 @@
   - Add unit tests for the comparator, including the equal-priority tie-break.
   - _Requirements: 1.1, 2.2, 2.3_
 
-- [ ] 3. Implement the core packing function
+- [x] 3. Implement the core packing function
   - Implement `pack(items, budget)` using priority-prefix semantics (stop at the
     first item that does not fit; never skip-and-continue).
   - Reject duplicate `id`s: check for duplicates before sorting and throw an error.
