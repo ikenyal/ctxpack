@@ -50,7 +50,7 @@
     shape, and invalid budget.
   - _Requirements: 3.1, 3.3, 3.4, 3.5_
 
-- [ ] 7. Wire the CLI to the core and format output
+- [x] 7. Wire the CLI to the core and format output
   - Call `core.pack` and print the selected `id`s and total tokens.
   - Add tests asserting the printed ids and total tokens for known inputs.
   - _Requirements: 3.1, 3.2_

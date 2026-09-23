@@ -72,6 +72,18 @@
         "chatSessionId": "sess_58b93c58-7bcb-4b50-968a-02b0b47e888c",
         "timestamp": 1790125767441
       }
+    ],
+    "7. Wire the CLI to the core and format output": [
+      {
+        "executionId": "32f1c759-7001-4bb0-be88-8325d5211791",
+        "chatSessionId": "sess_b96ce07b-3195-4d88-a462-64bcdf19d9b2",
+        "timestamp": 1790126018416
+      },
+      {
+        "executionId": "32f1c759-7001-4bb0-be88-8325d5211791",
+        "chatSessionId": "sess_b96ce07b-3195-4d88-a462-64bcdf19d9b2",
+        "timestamp": 1790127444689
+      }
     ]
   }
 }
