@@ -61,7 +61,7 @@
   - Add a test that all items are displayed.
   - _Requirements: 4.1, 4.5_
 
-- [ ] 9. Add the budget slider and selection highlighting
+- [x] 9. Add the budget slider and selection highlighting
   - Add a budget slider bounded to `[0, sum(all tokens)]`.
   - On slider change, call `core.pack`, highlight selected items, and show total
     tokens vs. budget without a page reload.
