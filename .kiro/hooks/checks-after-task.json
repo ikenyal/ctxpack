@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "checks after task",
+      "trigger": "PostTaskExec",
+      "description": "Run typecheck and vitest after each spec task completes",
+      "action": {
+        "type": "command",
+        "command": "echo \"$(date -u +%Y-%m-%dT%H:%M:%SZ) checks after task\" >> .kiro/hook-runs.log && npm run -s typecheck && npx vitest run"
+      }
+    }
+  ]
+}
