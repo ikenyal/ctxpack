@@ -8,7 +8,8 @@
       "action": {
         "type": "command",
         "command": "echo \"$(date -u +%Y-%m-%dT%H:%M:%SZ) checks after task\" >> .kiro/hook-runs.log && npm run -s typecheck && npx vitest run"
-      }
+      },
+      "enabled": true
     }
   ]
 }
