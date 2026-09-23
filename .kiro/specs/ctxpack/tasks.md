@@ -55,7 +55,7 @@
   - Add tests asserting the printed ids and total tokens for known inputs.
   - _Requirements: 3.1, 3.2_
 
-- [ ] 8. Build the Web UI item list
+- [x] 8. Build the Web UI item list
   - In `src/web/`, create the Vite SPA that renders all items with `id`, `priority`,
     and `tokens`.
   - Add a test that all items are displayed.
