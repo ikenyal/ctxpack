@@ -1,0 +1,183 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Add SDK/zod dependencies and the start script to `package.json`": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197926893
+      },
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197945267
+      },
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790198097721
+      }
+    ],
+    "2.1 Implement `McpInputError`, `validateItems`, and `validateBudget`": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927001
+      },
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197945965
+      },
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790198097955
+      }
+    ],
+    "2.2 Write unit tests for validation (`tests/mcp/validate.test.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927098
+      },
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790198113708
+      },
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790198252503
+      }
+    ],
+    "3.1 Implement `handlePackContext` delegating to core": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927175
+      },
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790198114506
+      },
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790198254409
+      }
+    ],
+    "3.2 Write unit/example tests for the handler (`tests/mcp/handler.test.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927225
+      }
+    ],
+    "3.3 Write property test: Delegation fidelity (`tests/mcp/handler.property.test.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927332
+      }
+    ],
+    "3.4 Write property test: Error safety / no-crash (`tests/mcp/handler.property.test.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927393
+      }
+    ],
+    "3.5 Write property test: Duplicate ids surface as tool error (`tests/mcp/handler.property.test.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927490
+      }
+    ],
+    "4. Checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927582
+      }
+    ],
+    "5.1 Implement `buildServer` registering the single pack_context tool": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927640
+      }
+    ],
+    "5.2 Write tool-registration test (`tests/mcp/server.test.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927694
+      }
+    ],
+    "6.1 Implement `main` connecting the stdio transport": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927780
+      }
+    ],
+    "6.2 Write startup-failure test (`tests/mcp/index.test.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927831
+      }
+    ],
+    "7.1 Create the MCP config file": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927899
+      },
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197947201
+      }
+    ],
+    "7.2 Write config test (`tests/mcp/config.test.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197927963
+      }
+    ],
+    "8.1 Write handshake / stdio integration test (`tests/mcp/integration.test.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197928028
+      }
+    ],
+    "9. Final checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790197928094
+      }
+    ],
+    "1. Add MCP runtime dependencies and start script": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790198097822
+      }
+    ],
+    "2. Implement MCP input validation (`src/mcp/validate.ts`)": [
+      {
+        "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
+        "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
+        "timestamp": 1790198252657
+      }
+    ]
+  }
+}
