@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ctxpack",
+  "version": "1.0.0",
+  "description": "Deterministically select which candidate files fit an LLM context token budget using the ctxpack pack_context MCP tool.",
+  "author": {
+    "name": "ikenyal"
+  },
+  "keywords": [
+    "context budget",
+    "token budget",
+    "pack context",
+    "context window",
+    "ctxpack"
+  ],
+  "license": "MIT"
+}
