@@ -68,7 +68,7 @@
   - Add tests that moving the slider updates the highlighted selection via the core.
   - _Requirements: 4.2, 4.3, 4.4, 4.5_
 
-- [ ] 10. Add a README and finalize
+- [x] 10. Add a README and finalize
   - Document install, `vitest --run`, `vite`, and the CLI usage
     (`ctxpack pack items.json --budget 8000`).
   - Note that the default token counter is an approximation.
