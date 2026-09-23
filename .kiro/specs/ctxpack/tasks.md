@@ -42,7 +42,7 @@
   - Add unit tests for the default counter and for supplying a custom counter.
   - _Requirements: 5.1, 5.2, 5.3, 5.4_
 
-- [ ] 6. Implement CLI item loading and validation
+- [x] 6. Implement CLI item loading and validation
   - In `src/cli/`, read the JSON file and validate it parses into `Item[]`.
   - Parse and validate `--budget` (non-negative integer).
   - Report descriptive errors to stderr and exit non-zero on failure.
