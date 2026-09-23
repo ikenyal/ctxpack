@@ -23,7 +23,7 @@
     zero-token items, and a duplicate-id error test.
   - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 2.4_
 
-- [ ] 4. Add property-based tests for the correctness properties
+- [x] 4. Add property-based tests for the correctness properties
   - Add a property-based testing library. Generate `Item[]` with unique `id`s,
     integer priorities (no `NaN` or `Infinity`, since `compareItems` relies on
     numeric subtraction), and non-negative integers for `tokens` and `budget`.
