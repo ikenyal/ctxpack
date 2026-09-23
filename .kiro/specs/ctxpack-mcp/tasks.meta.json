@@ -1,5 +1,10 @@
 {
-  "pbtResults": {},
+  "pbtResults": {
+    "3.4 Write property test: Error safety / no-crash (`tests/mcp/handler.property.test.ts`)": {
+      "status": "passed",
+      "lastRunTimestamp": 1790203418493
+    }
+  },
   "executionHistory": {
     "1.1 Add SDK/zod dependencies and the start script to `package.json`": [
       {
@@ -74,6 +79,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927225
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203207966
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203308343
       }
     ],
     "3.3 Write property test: Delegation fidelity (`tests/mcp/handler.property.test.ts`)": [
@@ -81,6 +96,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927332
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203209432
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203310455
       }
     ],
     "3.4 Write property test: Error safety / no-crash (`tests/mcp/handler.property.test.ts`)": [
@@ -88,6 +113,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927393
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203317103
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204192819
       }
     ],
     "3.5 Write property test: Duplicate ids surface as tool error (`tests/mcp/handler.property.test.ts`)": [
@@ -95,6 +130,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927490
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204199839
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204392346
       }
     ],
     "4. Checkpoint - Ensure all tests pass": [
@@ -102,6 +147,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927582
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204402644
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204422774
       }
     ],
     "5.1 Implement `buildServer` registering the single pack_context tool": [
@@ -109,6 +164,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927640
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203210716
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203309256
       }
     ],
     "5.2 Write tool-registration test (`tests/mcp/server.test.ts`)": [
@@ -116,6 +181,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927694
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203318699
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204191790
       }
     ],
     "6.1 Implement `main` connecting the stdio transport": [
@@ -123,6 +198,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927780
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203319297
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204190842
       }
     ],
     "6.2 Write startup-failure test (`tests/mcp/index.test.ts`)": [
@@ -130,6 +215,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927831
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204200837
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204393407
       }
     ],
     "7.1 Create the MCP config file": [
@@ -142,6 +237,11 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197947201
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204474031
       }
     ],
     "7.2 Write config test (`tests/mcp/config.test.ts`)": [
@@ -149,6 +249,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197927963
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203109619
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790203199879
       }
     ],
     "8.1 Write handshake / stdio integration test (`tests/mcp/integration.test.ts`)": [
@@ -156,6 +266,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197928028
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204202136
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204394461
       }
     ],
     "9. Final checkpoint - Ensure all tests pass": [
@@ -163,6 +283,16 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790197928094
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204433801
+      },
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204442839
       }
     ],
     "1. Add MCP runtime dependencies and start script": [
@@ -177,6 +307,41 @@
         "executionId": "23eed898-ca62-43f4-bce6-9cbdca85f8cd",
         "chatSessionId": "sess_2c907096-9bd4-4a85-a85c-4e1dd3e09864",
         "timestamp": 1790198252657
+      }
+    ],
+    "5. Build the MCP server and register the tool (`src/mcp/server.ts`)": [
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204191832
+      }
+    ],
+    "3. Implement the pack_context handler (`src/mcp/handler.ts`)": [
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204392390
+      }
+    ],
+    "6. Implement the process entry (`src/mcp/index.ts`)": [
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204393435
+      }
+    ],
+    "8. Integration and smoke tests": [
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204394492
+      }
+    ],
+    "7. Register the workspace MCP config (`.kiro/settings/mcp.json`)": [
+      {
+        "executionId": "b3c49cbd-6a6b-4e82-bd75-02da024ddf9b",
+        "chatSessionId": "sess_09ff7535-d983-4dff-af44-5496d657d63f",
+        "timestamp": 1790204474081
       }
     ]
   }
