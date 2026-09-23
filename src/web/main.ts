@@ -1,10 +1,11 @@
 // ctxpack Web UI entry point.
-// Loads a list of items and renders all of them via the pure view in
-// `render.ts`. The budget slider and selection highlighting arrive in task 9.
-// All selection logic delegates to `src/core/`; this layer holds none.
+// Loads a list of items and renders them with a budget slider via the pure view
+// in `render.ts`. Moving the slider re-runs the core packer and updates the
+// highlighted selection in place. All selection logic delegates to `src/core/`;
+// this layer holds none.
 
 import type { Item } from '../core/index.js';
-import { renderItemList } from './render.js';
+import { renderApp } from './render.js';
 
 /**
  * Sample items shown when the app loads. Local and self-contained (no network,
@@ -21,5 +22,5 @@ const items: Item[] = [
 
 const app = document.querySelector<HTMLElement>('#app');
 if (app) {
-  renderItemList(app, items);
+  renderApp(app, items);
 }
