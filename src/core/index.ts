@@ -3,3 +3,5 @@
 // Re-exports the Item and PackResult types plus the compareItems and pack functions from ./model.
 export type { Item, PackResult } from './model.js';
 export { compareItems, pack } from './model.js';
+export type { TokenCounter } from './token-counter.js';
+export { approxTokenCounter } from './token-counter.js';
