@@ -34,7 +34,7 @@
     - Property 4 — Order independence (shuffled input yields the same result).
   - _Requirements: 1.1, 1.2, 1.3, 2.1, 2.2, 2.3, 2.4_
 
-- [ ] 5. Implement the pluggable token counter
+- [x] 5. Implement the pluggable token counter
   - Define the `TokenCounter` interface and the `approxTokenCounter` default
     (`Math.ceil(text.length / 4)`) in `src/core/`.
   - Document clearly that the default is an approximation and matches no real

@@ -48,6 +48,18 @@
         "chatSessionId": "sess_bbf9f145-9f96-450e-bb06-56ba9de5e1b9",
         "timestamp": 1790122773349
       }
+    ],
+    "5. Implement the pluggable token counter": [
+      {
+        "executionId": "bc5222fa-98af-41fd-859a-f654a61a1583",
+        "chatSessionId": "sess_94f36bf9-8c7c-46e5-aaed-ada50a94dfa3",
+        "timestamp": 1790125282732
+      },
+      {
+        "executionId": "bc5222fa-98af-41fd-859a-f654a61a1583",
+        "chatSessionId": "sess_94f36bf9-8c7c-46e5-aaed-ada50a94dfa3",
+        "timestamp": 1790125359763
+      }
     ]
   }
 }
