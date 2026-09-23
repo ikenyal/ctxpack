@@ -8,7 +8,7 @@
       "matcher": "\\.(ts|tsx)$",
       "action": {
         "type": "command",
-        "command": "npx eslint --fix ."
+        "command": "echo \"$(date -u +%Y-%m-%dT%H:%M:%SZ) lint on save\" >> .kiro/hook-runs.log && npx eslint --fix ."
       }
     }
   ]
