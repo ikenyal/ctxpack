@@ -44,7 +44,7 @@ cover the three delegation-layer correctness properties from the design.
       non-array items, negative budget, fractional budget, and valid samples.
     - _Requirements: 3.1, 3.2_
 
-- [ ] 3. Implement the pack_context handler (`src/mcp/handler.ts`)
+- [x] 3. Implement the pack_context handler (`src/mcp/handler.ts`)
   - [x] 3.1 Implement `handlePackContext` delegating to core
     - Create `src/mcp/handler.ts`. Define `PackContextInput`
       (`{ items: unknown; budget: unknown }`) and `PackContextOutput`
@@ -61,14 +61,14 @@ cover the three delegation-layer correctness properties from the design.
       handler. Error results must carry no `structuredContent`.
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.5, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6_
 
-  - [~] 3.2 Write unit/example tests for the handler (`tests/mcp/handler.test.ts`)
+  - [x] 3.2 Write unit/example tests for the handler (`tests/mcp/handler.test.ts`)
     - A concrete success case with a known selection; the empty-items case
       returning `[]`/`0` (Req 2.5); the `budget === 0` case (Req 3.6); one
       explicit malformed-item message check; one explicit invalid-budget message
       check.
     - _Requirements: 2.3, 2.5, 3.1, 3.2, 3.6_
 
-  - [~] 3.3 Write property test: Delegation fidelity (`tests/mcp/handler.property.test.ts`)
+  - [x] 3.3 Write property test: Delegation fidelity (`tests/mcp/handler.property.test.ts`)
     - **Property 1: Delegation fidelity**
     - **Validates: Requirements 2.1, 2.2, 2.3, 2.4, 2.5, 3.6**
     - Tag comment: `// Feature: ctxpack-mcp, Property 1: For any array of valid items and any non-negative integer budget, the pack_context result equals core.pack's selection (ids in order), totalTokens, and echoed budget.`
@@ -79,7 +79,7 @@ cover the three delegation-layer correctness properties from the design.
       Assert the handler result equals `core.pack(items, budget)` directly.
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.5, 3.6_
 
-  - [~] 3.4 Write property test: Error safety / no-crash (`tests/mcp/handler.property.test.ts`)
+  - [x] 3.4 Write property test: Error safety / no-crash (`tests/mcp/handler.property.test.ts`)
     - **Property 2: Error safety and no-crash on invalid input**
     - **Validates: Requirements 3.1, 3.2, 3.4, 3.5**
     - Tag comment: `// Feature: ctxpack-mcp, Property 2: For any invalid input, the handler returns isError:true with a text message, never throws, carries no selection, and stays responsive to a subsequent valid request.`
@@ -90,7 +90,7 @@ cover the three delegation-layer correctness properties from the design.
       selection payload, and that a following known-valid input succeeds.
     - _Requirements: 3.1, 3.2, 3.4, 3.5_
 
-  - [~] 3.5 Write property test: Duplicate ids surface as tool error (`tests/mcp/handler.property.test.ts`)
+  - [x] 3.5 Write property test: Duplicate ids surface as tool error (`tests/mcp/handler.property.test.ts`)
     - **Property 3: Duplicate ids surface as a tool error naming the id**
     - **Validates: Requirements 3.3**
     - Tag comment: `// Feature: ctxpack-mcp, Property 3: For any items array with a duplicated id and a valid budget, the handler catches core's error, returns isError:true whose message includes the duplicated id, and does not throw.`
@@ -100,11 +100,11 @@ cover the three delegation-layer correctness properties from the design.
       and the message contains the duplicated id.
     - _Requirements: 3.3_
 
-- [~] 4. Checkpoint - Ensure all tests pass
+- [x] 4. Checkpoint - Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 5. Build the MCP server and register the tool (`src/mcp/server.ts`)
-  - [~] 5.1 Implement `buildServer` registering the single pack_context tool
+- [x] 5. Build the MCP server and register the tool (`src/mcp/server.ts`)
+  - [x] 5.1 Implement `buildServer` registering the single pack_context tool
     - Create `src/mcp/server.ts` exporting `buildServer(): McpServer`. Construct
       an `McpServer` and call `server.registerTool('pack_context', config, handler)`.
     - `config` carries a `description`, a zod `inputSchema`
@@ -115,15 +115,15 @@ cover the three delegation-layer correctness properties from the design.
       Register no other tool. No process globals here.
     - _Requirements: 1.2, 1.3, 1.4_
 
-  - [~] 5.2 Write tool-registration test (`tests/mcp/server.test.ts`)
+  - [x] 5.2 Write tool-registration test (`tests/mcp/server.test.ts`)
     - Connect an in-memory client to `buildServer()`, list tools, assert exactly
       one tool named `pack_context` whose input schema advertises `items` and
       `budget`. Call an unknown tool name and assert an `isError` result, then
       assert a following valid `pack_context` call still succeeds.
     - _Requirements: 1.3, 1.4, 1.6_
 
-- [ ] 6. Implement the process entry (`src/mcp/index.ts`)
-  - [~] 6.1 Implement `main` connecting the stdio transport
+- [x] 6. Implement the process entry (`src/mcp/index.ts`)
+  - [x] 6.1 Implement `main` connecting the stdio transport
     - Create `src/mcp/index.ts` exporting `async function main(): Promise<void>`
       that builds the server via `buildServer()`, creates a
       `StdioServerTransport`, and `await server.connect(transport)`.
@@ -134,34 +134,34 @@ cover the three delegation-layer correctness properties from the design.
       `process.exit(1)`.
     - _Requirements: 1.1, 1.5, 4.2, 4.3_
 
-  - [~] 6.2 Write startup-failure test (`tests/mcp/index.test.ts`)
+  - [x] 6.2 Write startup-failure test (`tests/mcp/index.test.ts`)
     - Inject a transport whose init rejects into `main` and assert the returned
       promise rejects (the entry maps this to a non-zero exit).
     - _Requirements: 1.5_
 
-- [ ] 7. Register the workspace MCP config (`.kiro/settings/mcp.json`)
-  - [-] 7.1 Create the MCP config file
+- [x] 7. Register the workspace MCP config (`.kiro/settings/mcp.json`)
+  - [x] 7.1 Create the MCP config file
     - Create `.kiro/settings/mcp.json` with `mcpServers.ctxpack` set to
       `command: "node"`, `args: ["dist/mcp/index.js"]`, `disabled: false`, and
       `autoApprove: ["pack_context"]` (exactly one tool, no others).
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-  - [~] 7.2 Write config test (`tests/mcp/config.test.ts`)
+  - [x] 7.2 Write config test (`tests/mcp/config.test.ts`)
     - Read `.kiro/settings/mcp.json`; assert it parses, registers `ctxpack` with
       `command: "node"`, args referencing `dist/mcp/index.js`, `disabled: false`,
       and `autoApprove` deep-equals `["pack_context"]`. Read `package.json`;
       assert the single `start:mcp` script points at `dist/mcp/index.js`.
     - _Requirements: 4.1, 5.1, 5.2, 5.3, 5.4, 5.5_
 
-- [ ] 8. Integration and smoke tests
-  - [~] 8.1 Write handshake / stdio integration test (`tests/mcp/integration.test.ts`)
+- [x] 8. Integration and smoke tests
+  - [x] 8.1 Write handshake / stdio integration test (`tests/mcp/integration.test.ts`)
     - Connect an in-memory client to the built server, complete the handshake,
       and perform one `pack_context` round trip asserting a success result.
       Optionally add a spawn-based smoke test that starts
       `node dist/mcp/index.js` and performs one round trip.
     - _Requirements: 1.1, 4.2, 4.3_
 
-- [~] 9. Final checkpoint - Ensure all tests pass
+- [x] 9. Final checkpoint - Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Notes
