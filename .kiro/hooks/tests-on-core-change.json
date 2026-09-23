@@ -9,7 +9,8 @@
       "action": {
         "type": "command",
         "command": "echo \"$(date -u +%Y-%m-%dT%H:%M:%SZ) tests on core change\" >> .kiro/hook-runs.log && npx vitest run"
-      }
+      },
+      "enabled": true
     }
   ]
 }
