@@ -38,7 +38,7 @@ cover the three delegation-layer correctness properties from the design.
       `../core/index.js`; do not import from `cli` or `web`.
     - _Requirements: 3.1, 3.2_
 
-  - [ ]* 2.2 Write unit tests for validation (`tests/mcp/validate.test.ts`)
+  - [ ] 2.2 Write unit tests for validation (`tests/mcp/validate.test.ts`)
     - Accept/reject examples mirroring the CLI's `load.test.ts`: non-integer
       tokens, negative tokens, non-string id, non-finite (NaN) priority,
       non-array items, negative budget, fractional budget, and valid samples.
@@ -61,14 +61,14 @@ cover the three delegation-layer correctness properties from the design.
       handler. Error results must carry no `structuredContent`.
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.5, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6_
 
-  - [ ]* 3.2 Write unit/example tests for the handler (`tests/mcp/handler.test.ts`)
+  - [ ] 3.2 Write unit/example tests for the handler (`tests/mcp/handler.test.ts`)
     - A concrete success case with a known selection; the empty-items case
       returning `[]`/`0` (Req 2.5); the `budget === 0` case (Req 3.6); one
       explicit malformed-item message check; one explicit invalid-budget message
       check.
     - _Requirements: 2.3, 2.5, 3.1, 3.2, 3.6_
 
-  - [ ]* 3.3 Write property test: Delegation fidelity (`tests/mcp/handler.property.test.ts`)
+  - [ ] 3.3 Write property test: Delegation fidelity (`tests/mcp/handler.property.test.ts`)
     - **Property 1: Delegation fidelity**
     - **Validates: Requirements 2.1, 2.2, 2.3, 2.4, 2.5, 3.6**
     - Tag comment: `// Feature: ctxpack-mcp, Property 1: For any array of valid items and any non-negative integer budget, the pack_context result equals core.pack's selection (ids in order), totalTokens, and echoed budget.`
@@ -79,7 +79,7 @@ cover the three delegation-layer correctness properties from the design.
       Assert the handler result equals `core.pack(items, budget)` directly.
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.5, 3.6_
 
-  - [ ]* 3.4 Write property test: Error safety / no-crash (`tests/mcp/handler.property.test.ts`)
+  - [ ] 3.4 Write property test: Error safety / no-crash (`tests/mcp/handler.property.test.ts`)
     - **Property 2: Error safety and no-crash on invalid input**
     - **Validates: Requirements 3.1, 3.2, 3.4, 3.5**
     - Tag comment: `// Feature: ctxpack-mcp, Property 2: For any invalid input, the handler returns isError:true with a text message, never throws, carries no selection, and stays responsive to a subsequent valid request.`
@@ -90,7 +90,7 @@ cover the three delegation-layer correctness properties from the design.
       selection payload, and that a following known-valid input succeeds.
     - _Requirements: 3.1, 3.2, 3.4, 3.5_
 
-  - [ ]* 3.5 Write property test: Duplicate ids surface as tool error (`tests/mcp/handler.property.test.ts`)
+  - [ ] 3.5 Write property test: Duplicate ids surface as tool error (`tests/mcp/handler.property.test.ts`)
     - **Property 3: Duplicate ids surface as a tool error naming the id**
     - **Validates: Requirements 3.3**
     - Tag comment: `// Feature: ctxpack-mcp, Property 3: For any items array with a duplicated id and a valid budget, the handler catches core's error, returns isError:true whose message includes the duplicated id, and does not throw.`
@@ -115,7 +115,7 @@ cover the three delegation-layer correctness properties from the design.
       Register no other tool. No process globals here.
     - _Requirements: 1.2, 1.3, 1.4_
 
-  - [ ]* 5.2 Write tool-registration test (`tests/mcp/server.test.ts`)
+  - [ ] 5.2 Write tool-registration test (`tests/mcp/server.test.ts`)
     - Connect an in-memory client to `buildServer()`, list tools, assert exactly
       one tool named `pack_context` whose input schema advertises `items` and
       `budget`. Call an unknown tool name and assert an `isError` result, then
@@ -134,7 +134,7 @@ cover the three delegation-layer correctness properties from the design.
       `process.exit(1)`.
     - _Requirements: 1.1, 1.5, 4.2, 4.3_
 
-  - [ ]* 6.2 Write startup-failure test (`tests/mcp/index.test.ts`)
+  - [ ] 6.2 Write startup-failure test (`tests/mcp/index.test.ts`)
     - Inject a transport whose init rejects into `main` and assert the returned
       promise rejects (the entry maps this to a non-zero exit).
     - _Requirements: 1.5_
@@ -146,7 +146,7 @@ cover the three delegation-layer correctness properties from the design.
       `autoApprove: ["pack_context"]` (exactly one tool, no others).
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-  - [ ]* 7.2 Write config test (`tests/mcp/config.test.ts`)
+  - [ ] 7.2 Write config test (`tests/mcp/config.test.ts`)
     - Read `.kiro/settings/mcp.json`; assert it parses, registers `ctxpack` with
       `command: "node"`, args referencing `dist/mcp/index.js`, `disabled: false`,
       and `autoApprove` deep-equals `["pack_context"]`. Read `package.json`;
@@ -154,7 +154,7 @@ cover the three delegation-layer correctness properties from the design.
     - _Requirements: 4.1, 5.1, 5.2, 5.3, 5.4, 5.5_
 
 - [ ] 8. Integration and smoke tests
-  - [ ]* 8.1 Write handshake / stdio integration test (`tests/mcp/integration.test.ts`)
+  - [ ] 8.1 Write handshake / stdio integration test (`tests/mcp/integration.test.ts`)
     - Connect an in-memory client to the built server, complete the handshake,
       and perform one `pack_context` round trip asserting a success result.
       Optionally add a spawn-based smoke test that starts
@@ -166,8 +166,7 @@ cover the three delegation-layer correctness properties from the design.
 
 ## Notes
 
-- Tasks marked with `*` are optional test sub-tasks and can be skipped for a
-  faster MVP; core implementation tasks are never optional.
+- All test sub-tasks are required; there are no optional tasks in this plan.
 - Each task references specific requirements (and property tests reference their
   design property) for traceability.
 - Property tests use fast-check with a minimum of 100 iterations each and carry a
