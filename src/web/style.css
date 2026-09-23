@@ -1,0 +1,67 @@
+/* ctxpack Web UI styles.
+   Purely presentational: selection state comes from the `selected` class that
+   the view toggles (see render.ts). No layout decision here affects packing. */
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 2rem;
+  color: #1a1a1a;
+}
+
+.controls {
+  margin-bottom: 1.5rem;
+}
+
+/* Slider spans the full width of its container. */
+.budget-slider {
+  display: block;
+  width: 100%;
+}
+
+.summary {
+  margin: 0.5rem 0 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Simple aligned list: no bullets, one row per item. */
+.item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Fixed-width columns keep ids, priorities, and tokens aligned. */
+.item-id {
+  flex: 1 1 auto;
+}
+
+.item-priority,
+.item-tokens {
+  flex: 0 0 4rem;
+  text-align: right;
+  color: #555;
+}
+
+/* Not selected: dimmed. */
+.item {
+  opacity: 0.45;
+}
+
+/* Selected: clearly highlighted with a colored background and bold id. */
+.item.selected {
+  opacity: 1;
+  background: #e3f0ff;
+}
+
+.item.selected .item-id {
+  font-weight: 700;
+}

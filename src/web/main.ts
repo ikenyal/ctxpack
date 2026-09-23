@@ -6,6 +6,7 @@
 
 import type { Item } from '../core/index.js';
 import { renderApp } from './render.js';
+import './style.css';
 
 /**
  * Sample items shown when the app loads. Local and self-contained (no network,
