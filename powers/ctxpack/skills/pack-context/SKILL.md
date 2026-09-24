@@ -123,6 +123,19 @@ out, because packing already stopped at a larger item ahead of it. That is
 intentional: filling leftover budget with lower-priority items is a non-goal,
 and stopping early is what keeps the result budget-monotone.
 
+### Explaining why an item was excluded
+
+When you tell the user why an item was left out, distinguish two cases based on
+the budget remaining when packing reached that item:
+
+- **Attribute the exclusion to the priority-prefix rule only when the item would
+  have fit in the remaining budget** (its `tokens` are less than or equal to what
+  was left). Here the item was dropped purely because packing stopped at an
+  earlier over-budget item, not because of its own size.
+- **If the item is larger than the remaining budget, say it simply did not fit.**
+  The priority-prefix rule is not the reason; the item would have been excluded
+  regardless.
+
 ### Worked example
 
 Sorted items and a budget of 10:
