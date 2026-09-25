@@ -1,5 +1,7 @@
 # ctxpack
 
+[![CI](https://github.com/ikenyal/ctxpack/actions/workflows/ci.yml/badge.svg)](https://github.com/ikenyal/ctxpack/actions/workflows/ci.yml)
+
 A deterministic context packer for LLM agents.
 
 Given a list of items — each with an `id`, a `priority`, and a `tokens` count —
@@ -9,6 +11,21 @@ not ad hoc. ctxpack makes that selection deterministic and reproducible.
 
 Everything runs locally and self-contained: no backend, no database, no network
 calls.
+
+## Surfaces
+
+ctxpack exposes the same core selection logic through several surfaces:
+
+- **Core library** (`src/core/`): the pure packing function. All other surfaces
+  delegate selection to it.
+- **CLI** (`src/cli/`): `ctxpack pack items.json --budget 8000`.
+- **Web UI** (`src/web/`): a single-page app with a budget slider.
+- **MCP server** (`src/mcp/`): exposes a `pack_context` tool over MCP; run with
+  `npm run start:mcp`.
+- **Kiro power** (`powers/ctxpack/`): packages the packing workflow as an
+  installable Kiro power.
+- **Custom agent** (`.kiro/agents/context-planner.md`): a read-only planning agent
+  that uses the `pack_context` MCP tool.
 
 ## Packing semantics (priority-prefix)
 
@@ -141,3 +158,32 @@ ctxpack/
 
 Dependencies point inward: `cli` and `web` depend on `core`; the core never imports
 from the outer layers.
+
+## How this project uses Kiro
+
+| Lesson | What we did | Where to look |
+|--------|-------------|---------------|
+| Spec-driven development | Built the project from two specs | `.kiro/specs/ctxpack/` and `.kiro/specs/ctxpack-mcp/` |
+| Steering | Captured project rules as steering; `packing-semantics.md` enforces priority-prefix packing | `.kiro/steering/` |
+| Hooks | Two `PostFileSave` hooks and one `PostTaskExec` hook, with a run log | `.kiro/hooks/`, `.kiro/hook-runs.log` |
+| Property-based testing | Documented correctness properties in both `design.md` files and tested them | `tests/core/pack.property.test.ts`, `tests/mcp/handler.property.test.ts` |
+| Powers | Packaged the workflow as a Kiro power, created with the Build a Power power from the Kiro powers registry | `powers/ctxpack/` |
+| MCP | Built an MCP server exposing `pack_context`, registered in the workspace | `src/mcp/`, `.kiro/settings/mcp.json` |
+| Custom agents | A read-only `context-planner` agent with `pack_context` pre-approved | `.kiro/agents/context-planner.md` |
+| Bonus — Kiro Web cloud session | PR #1 opened by `kiro-agent`, which added the CI workflow | `.github/workflows/ci.yml` |
+| Bonus — packaged power | Install with "Import power from GitHub" | https://github.com/ikenyal/ctxpack/tree/main/powers/ctxpack |
+
+## Using ctxpack from Kiro
+
+1. Run `npm run build` first so the compiled MCP server exists at `dist/mcp/index.js`.
+2. The workspace registers the MCP server via `.kiro/settings/mcp.json`.
+3. If Kiro shows `spawn node ENOENT`, launch Kiro from a terminal so it inherits your
+   `PATH` (and can find `node`).
+4. Switch to `context-planner` in the agent picker.
+
+The `context-planner` agent has no shell, so it estimates file sizes by reading the
+files (`tokens = ceil(characters / 4)`) rather than measuring them with a command.
+
+## License
+
+Released under the [MIT License](LICENSE).
