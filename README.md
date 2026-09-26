@@ -4,6 +4,12 @@
 
 A deterministic context packer for LLM agents.
 
+
+
+https://github.com/user-attachments/assets/92164e01-4900-41c5-9e3d-b172938489fb
+
+
+
 Given a list of items — each with an `id`, a `priority`, and a `tokens` count —
 and a token budget, ctxpack selects which items to include in the context. Agents
 have limited context windows, so deciding what to include should be predictable,
